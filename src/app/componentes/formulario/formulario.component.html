@@ -1,0 +1,20 @@
+<form (submit)="agregarPersona()">
+    <div>
+        <span>Nombre:</span>
+        <input type="text" name="nombre" class="form-control" [(ngModel)]="nombre">
+    </div>
+    <div>
+        <span>Ciudad:</span>
+        <input type="text" class="form-control" name="ciudad" [(ngModel)]="ciudad">
+    </div>
+    <input type="submit">
+    <br><br>
+    <ul>
+        <li *ngFor="let p of personas" class="mb-3">
+            <div (click)="mostrarNombre(p.nombre)">
+                <span>Nombre: {{ p.nombre }}</span><br>
+                <span>Ciudad: {{ p.ciudad }}</span>
+            </div>
+        </li>
+    </ul>
+</form>

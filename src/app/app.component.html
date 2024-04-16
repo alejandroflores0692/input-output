@@ -1,0 +1,19 @@
+
+<br>
+{{ varHijo }}
+<br>
+{{ nombre }}
+
+<hr>
+
+<hijo [varPadre]="varPadre" [varPadre2]="varPadre2" (enviar)="obtenerVariableHijo($event)"></hijo>
+
+<hr>
+
+<formulario (enviarNombre)="obtenerNombre($event)"></formulario>
+
+<hr>
+
+<manejo-de-servicios></manejo-de-servicios>
+
+<router-outlet></router-outlet>

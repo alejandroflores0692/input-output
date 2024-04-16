@@ -1,0 +1,6 @@
+<div>
+    <span>Mensaje:</span>
+    <input type="text" class="form-control" name="mensaje" [(ngModel)]="mensaje">
+    <button (click)="agregarMensaje()">Agregar mensaje</button>
+    <span *ngFor="let m of messageService.messages">{{ m }}, </span>
+</div>
